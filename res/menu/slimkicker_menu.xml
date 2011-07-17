@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/new_game"
+          android:icon="@drawable/ic_menu_anchor"
+          android:title="Home" />
+    <item android:id="@+id/help"
+          android:icon="@drawable/ic_menu_barcode"
+          android:title="Track Diet" />
+      <item android:id="@+id/help"
+          android:icon="@drawable/ic_menu_business"
+          android:title="Track Exercise" />
+     <item android:id="@+id/help"
+          android:icon="@drawable/ic_menu_car"
+          android:title="Friends" />
+</menu>
