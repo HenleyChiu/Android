@@ -12,7 +12,7 @@
   android:text="SlimKicker" 
   android:layout_width="fill_parent" 
   android:layout_height="wrap_content" 
-  android:textColor="@color/titletextcolor"
+  android:textColor="#ffffff"
     android:background="#1E8FEB"
     android:layout_marginRight="8dip"
       android:gravity="center_vertical"

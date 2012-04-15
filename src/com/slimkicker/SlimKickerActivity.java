@@ -15,19 +15,37 @@ import android.graphics.Color;
 import android.view.*;
 import android.text.*;
 import android.widget.*;
+import android.content.*;
 
-public class SlimKickerActivity extends Activity implements View.OnClickListener {
-	Button btn;
-	@Override
-	
+public class SlimKickerActivity extends Activity {
+	 public boolean onOptionsItemSelected(MenuItem item) {
+	        // Handle item selection
+	        switch (item.getItemId()) {
+	        case R.id.home_option:
+	            return true;
+	        case R.id.diet_option:
+	            Intent intent = new Intent(this, DietActivity.class);
+	            startActivity(intent);
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	        }
+	    }
+
 	public void onCreate(Bundle icicle) {
+		//getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+		
 		super.onCreate(icicle);
-	    final boolean customTitleSupported = requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+	    //final boolean customTitleSupported = requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+		
+		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 
-		setContentView(R.layout.main);
+		setContentView(R.layout.profile);
 		
+		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.custom_title);
+
 		//set background of header
-		
+		/*
 		ViewGroup decorView = (ViewGroup) this.getWindow().getDecorView();
 		 
 	    LinearLayout root = (LinearLayout) decorView.getChildAt(0);
@@ -42,16 +60,19 @@ public class SlimKickerActivity extends Activity implements View.OnClickListener
         }
 		
 	    final TextView myTitleText = (TextView) findViewById(R.id.myTitle);
+	    
 	    if ( myTitleText != null ) {
 			Typeface font = Typeface.createFromAsset(getAssets(), "helvet-lt-webfont.ttf");
 			myTitleText.setTypeface(font);
-			
-	        //myTitleText.setText("Welcome to SlimKicker");
-	        //myTitleText.setBackgroundColor(Color.GREEN);
 	    }
-
+		
+		*/
+		
 	    //set fonts of labels
-		Integer[] ids = {R.id.points_label, R.id.badges_label, R.id.level_label, R.id.total_points, R.id.total_diet, R.id.total_exercise, R.id.total_challenges};
+		Integer[] ids = {R.id.points_label, R.id.badges_label, R.id.level_label, 
+				
+				R.id.points_amount, R.id.badges_amount, R.id.level_amount,
+				R.id.total_points, R.id.total_diet, R.id.total_exercise, R.id.total_challenges};
 		
 		for(int i=0; i< ids.length; i++){
 			int id = ids[i];
@@ -70,23 +91,14 @@ public class SlimKickerActivity extends Activity implements View.OnClickListener
 		txt = (TextView) findViewById(R.id.this_week_label);
 		txt.setTypeface(font);
 		
-		txt = (TextView) findViewById(R.id.myTitle);
-		txt.setTypeface(font);
-		
+
 	}
 	
-	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 	    MenuInflater inflater = getMenuInflater();
 	    inflater.inflate(R.menu.slimkicker_menu, menu);
 	    return true;
 	}
-	
-	public void onClick(View view) {
-		updateTime();
-	}
-	
-	private void updateTime() {
-		btn.setText(new Date().toString());
-	}
+
+		
 }

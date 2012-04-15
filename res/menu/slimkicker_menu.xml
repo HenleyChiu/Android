@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/new_game"
+    <item android:id="@+id/home_option"
           android:icon="@drawable/ic_menu_anchor"
           android:title="Home" />
-    <item android:id="@+id/help"
+    <item android:id="@+id/diet_option"
           android:icon="@drawable/ic_menu_barcode"
-          android:title="Track Diet" />
-      <item android:id="@+id/help"
+          android:title="Diet" />
+      <item android:id="@+id/body_option"
           android:icon="@drawable/ic_menu_business"
-          android:title="Track Exercise" />
-     <item android:id="@+id/help"
+          android:title="Body" />
+      <item android:id="@+id/challenges_option"
+          android:icon="@drawable/ic_menu_business"
+          android:title="Challenges" />
+     <item android:id="@+id/friends_option"
           android:icon="@drawable/ic_menu_car"
           android:title="Friends" />
 </menu>
