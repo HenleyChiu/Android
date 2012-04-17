@@ -16,7 +16,7 @@ android:paddingBottom="200dip"
 >
 
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/avatar"
+android:id="@+id/imageView2"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:adjustViewBounds="true"
@@ -29,9 +29,9 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 android:orientation="vertical"
 android:layout_width="fill_parent"
 android:layout_height="fill_parent"
-android:layout_alignTop="@id/avatar"
-android:layout_alignBottom="@id/avatar"
-android:layout_toRightOf="@id/avatar"
+android:layout_alignTop="@id/imageView2"
+android:layout_alignBottom="@id/imageView2"
+android:layout_toRightOf="@id/imageView2"
 android:paddingTop="8dip"
 android:paddingLeft="8dip"
 android:paddingRight="8dip"
@@ -50,7 +50,7 @@ android:background="#000000"
 		android:textColor="#C8C8C8"
 		android:layout_width="0dip"
 		android:layout_weight="1"
-		android:id="@+id/points_amount"
+		android:id="@+id/points"
 		android:gravity="right"
 		android:paddingRight="8dip"
 		
@@ -71,7 +71,7 @@ android:background="#000000"
 		android:textColor="#359AEE"
 		android:layout_width="0dip"
 		android:layout_weight="1"
-				android:id="@+id/badges_amount"
+				android:id="@+id/achievement"
 		android:paddingRight="8dip"
 		
 		android:gravity="right">
@@ -91,7 +91,7 @@ android:background="#000000"
 		android:textColor="#F78208"
 		android:layout_width="0dip"
 		android:layout_weight="1"
-				android:id="@+id/level_amount"
+				android:id="@+id/level"
 		android:paddingRight="8dip"
 		
 		android:gravity="right">
@@ -196,7 +196,7 @@ android:stretchColumns="0"
 		android:layout_weight="1">
 	</TextView>
 	<TextView 
-		android:id="@+id/total_diet" 
+		android:id="@+id/diet" 
 	
 	android:text="+120"
 		android:layout_height="fill_parent"
@@ -207,7 +207,7 @@ android:stretchColumns="0"
 		android:textColor="#FFFFFF">
 	</TextView>
 	<TextView 
-		android:id="@+id/total_exercise" 
+		android:id="@+id/exercise" 
 	
 	android:text="+90"
 		android:layout_height="fill_parent"
@@ -218,7 +218,7 @@ android:stretchColumns="0"
 		android:textColor="#FFFFFF">
 	</TextView>
 	<TextView 
-		android:id="@+id/total_challenges" 
+		android:id="@+id/challenges" 
 	android:text="+400"
 		android:layout_height="fill_parent"
 		android:layout_width="0dip"
@@ -323,9 +323,12 @@ android:layout_marginRight="10dip"
 >
 
 <TableRow
+android:id = "@+id/friend_row"
 android:background="#FFFFFF"
 android:layout_height="40dip">
-		<TextView android:text="#1"
+		<TextView
+		android:id ="@+id/friend1index"
+		 android:text="#1"
 		android:textColor="#000000"
 		android:layout_height="fill_parent"
 		android:layout_width="0dip"
@@ -336,10 +339,13 @@ android:layout_height="40dip">
 		android:layout_width="0dip"
 		android:layout_height="wrap_content"
 		android:adjustViewBounds="true"
+		android:id = "@+id/image1Url"
 		android:src="@drawable/small1"
 		android:layout_weight="1"
 		/>
-		<TextView android:text="Kendrick Perkins"
+		<TextView 
+		android:id="@+id/friend1Name"
+		android:text="Kendrick Perkins"
 		android:textColor="#000000"
 		android:layout_height="fill_parent"
 		android:layout_width="0dip"
@@ -349,7 +355,9 @@ android:layout_height="40dip">
 		android:layout_weight="4">
 		</TextView>
 		
-				<TextView android:text="900"
+				<TextView 
+		android:id="@+id/weeklypoints1"		
+		android:text="900"
 		android:textColor="#000000"
 		android:layout_height="fill_parent"
 		android:layout_width="0dip"
@@ -360,83 +368,6 @@ android:layout_height="40dip">
 		</TextView>
 </TableRow>
 
-<TableRow
-android:background="#FFFFFF"
-android:layout_height="40dip"
-android:layout_marginTop="5dip">
-		<TextView android:text="#2"
-		android:textColor="#000000"
-		android:layout_height="fill_parent"
-		android:layout_width="0dip"
-		android:gravity="center_vertical"
-		android:layout_weight="1">
-		</TextView>
-		<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-		android:layout_width="0dip"
-		android:layout_height="wrap_content"
-		android:adjustViewBounds="true"
-		android:src="@drawable/small2"
-		android:layout_weight="1"
-		/>
-		<TextView android:text="Kendrick Perkins"
-		android:textColor="#000000"
-		android:layout_height="fill_parent"
-		android:layout_width="0dip"
-		android:gravity="center"
-					android:textSize="14sp"
-		android:textStyle="bold"
-		android:layout_weight="4">
-		</TextView>
-		
-				<TextView android:text="900"
-		android:textColor="#000000"
-		android:layout_height="fill_parent"
-		android:layout_width="0dip"
-		android:textStyle="bold"
-			android:textSize="18sp"
-		android:gravity="center_vertical|center_horizontal"
-		android:layout_weight="2">
-		</TextView>
-</TableRow>
-
-<TableRow
-android:background="#FFFFFF"
-android:layout_height="40dip"
-android:layout_marginTop="5dip">
-		<TextView android:text="#3"
-		android:textColor="#000000"
-		android:layout_height="fill_parent"
-		android:layout_width="0dip"
-		android:gravity="center_vertical"
-		android:layout_weight="1">
-		</TextView>
-		<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-		android:layout_width="0dip"
-		android:layout_height="wrap_content"
-		android:adjustViewBounds="true"
-		android:src="@drawable/small2"
-		android:layout_weight="1"
-		/>
-		<TextView android:text="Kendrick Perkins"
-		android:textColor="#000000"
-		android:layout_height="fill_parent"
-		android:layout_width="0dip"
-		android:gravity="center"
-					android:textSize="14sp"
-		android:textStyle="bold"
-		android:layout_weight="4">
-		</TextView>
-		
-				<TextView android:text="900"
-		android:textColor="#000000"
-		android:layout_height="fill_parent"
-		android:layout_width="0dip"
-		android:textStyle="bold"
-			android:textSize="18sp"
-		android:gravity="center_vertical|center_horizontal"
-		android:layout_weight="2">
-		</TextView>
-</TableRow>
 
 
 
